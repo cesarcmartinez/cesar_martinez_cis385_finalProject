@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wildcat's Pizza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="navigation-container">
+        <div class="navigation-content">
+
+        </div>
+    </div>
+    <div class="introText center">
+        <p>Welcome to Wildcat's Pizza</p>
+        <form action="/menu" method="get">
+            <button class="button" type="submit" value="Menu"><span>Menu</span></button>
+        </form>
+    </div>
+
+</body>
+
+</html>

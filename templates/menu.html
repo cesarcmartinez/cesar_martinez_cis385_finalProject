@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="navigation-container">
+        <div class="navigation-content"></div>
+    </div>
+    <form action="/reviewOrder" method="POST">
+        <div class="introText center">
+            <p>Select Menu Item:
+                <select id=MenuItem name=main_item method="GET" action="/menu">
+                    {% for item in review1 %}
+                    <option value="{{item}}" SELECTED>{{item}}</option>"
+                    {% endfor %}
+                </select>
+            </p>
+            <p>Select Ingredients:
+                <select id=ExtraItem name=extra_item method="GET" action="/menu">
+                    {% for ingredient in review2 %}
+                    <option value="{{ingredient}}" SELECTED>{{ingredient}}</option>"
+                    {% endfor %}
+                </select>
+            </p>
+        </div>
+        <div class="center">
+            <button class="button" name="submit"><span>Review Order</span></button>
+        </div>
+    </form>
+
+</body>
+
+</html>

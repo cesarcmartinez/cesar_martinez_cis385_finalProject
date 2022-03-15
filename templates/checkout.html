@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="navigation-container">
+        <div class="navigation-content"></div>
+    </div>
+    <div class="introText center">
+        Items in your cart:
+        <ul>
+            {% for item in cart %}
+            <li>{{ item}}</li>
+            {% endfor %}
+        </ul>
+        <p>Your total is: {{ total }}</p>
+    </div>
+    <div class="center">
+        <form action="/menu" method="get">
+            <button class="button" type="submit" value="go to menu"><span>Add Items</span></button>
+        </form>
+    </div>
+    <div class="center">
+        <form action="/userInfo" method="get">
+            <button class="button" type="submit" value="go to details"><span>Check Out</span></button>
+        </form>
+    </div>
+</body>
+
+</html>

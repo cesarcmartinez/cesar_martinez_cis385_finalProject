@@ -1,0 +1,8 @@
+flask
+flask_restful
+flask_sqlalchemy
+flask_marshmallow
+marshmallow-sqlalchemy
+python-dotenv
+psycopg2
+datetime

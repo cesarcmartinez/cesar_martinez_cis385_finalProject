@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <div class="navigation-container">
+        <div class="navigation-content"></div>
+    </div>
+    <div class="introText center">
+        <p>Your order #{{ order_id }} is in progress</p>
+        <p>Ready in about 20-30 minutes</p>
+        <p>Thank you for choosing Wildcat's Pizza</p>
+    </div>
+</body>
+
+</html>
